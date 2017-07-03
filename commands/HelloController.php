@@ -27,4 +27,15 @@ class HelloController extends Controller
     {
         echo $message . "\n";
     }
+
+    /**
+     * Cuts 0s after point in numerals
+     * @param $numeral
+     */
+    public function actionCutZerosAfterPoint($numeral){
+
+        echo preg_replace("/(\d*)((?:\.(?:0)*)+$)|(\.([1-9])*)|((0)*)/", "\$1\$3", $numeral).PHP_EOL;
+    }
 }
+
+

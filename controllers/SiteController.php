@@ -123,4 +123,13 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionTask($task){
+        if($task == 1) 
+            return $this->render('task1');
+        elseif ($task == 2)
+            return $this->render('task2');
+        else
+            return $this->render('error');
+    }
 }
